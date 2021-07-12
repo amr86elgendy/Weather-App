@@ -1,0 +1,11 @@
+// colors
+$primaryColor: #0275d8;
+
+// mixins
+@mixin inputStyle($width) {
+  width: $width;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+}

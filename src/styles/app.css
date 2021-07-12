@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+body,
+html {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-image: url(../images/weather1.png);
+  height: 100vh;
+  background-size: 100% 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 25vh 1fr;
+      grid-template-rows: 25vh 1fr;
+}
+
+.container .up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .up h1 {
+  text-transform: capitalize;
+}
+
+.container .down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .down h3:nth-of-type(1) {
+  color: #0275d8;
+  margin-bottom: 1rem;
+}
+
+.container .down h5 {
+  color: gray;
+  margin-bottom: 1rem;
+}
+
+.container .down input[type='text'] {
+  width: 300px;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-radius: 20px 0 0 20px;
+}
+
+.container .down input[type='submit'] {
+  width: 100px;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: #0275d8;
+  color: white;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+}
+
+.container .down h3:nth-of-type(2),
+.container .down h3:nth-of-type(3) {
+  margin: 1rem 0;
+}
+
+.container .down h1 {
+  margin-bottom: 1rem;
+}
+
+.container .down div span:nth-child(1) {
+  margin-right: 6rem;
+}
+
+.container .error {
+  margin-top: 3rem;
+  color: red;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+  input[type='text'] {
+    width: 200px !important;
+  }
+  input[type='submit'] {
+    width: 75px !important;
+  }
+}
+/*# sourceMappingURL=app.css.map */
