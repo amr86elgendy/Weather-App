@@ -4,7 +4,11 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 const reducer = (state = initialState, action) => {
   if (action.type === 'SET_WEATHER') {
-    const { main: {temp, temp_min, temp_max}, name,weather } = action.payload;
+    const {
+      main: { temp, temp_min, temp_max },
+      name,
+      weather,
+    } = action.payload;
 
     return {
       ...state,
@@ -18,7 +22,7 @@ const reducer = (state = initialState, action) => {
   }
 
   if (action.type === 'SET_ERROR') {
-    return { ...state, error: action.payload }
+    return { ...state, error: action.payload };
   }
 
   if (action.type === 'CLEAN_STATE') {
@@ -34,7 +38,7 @@ const reducer = (state = initialState, action) => {
     };
   }
 
-  return {...state};
+  return { ...state };
 };
 
 const initialState = {
@@ -44,7 +48,7 @@ const initialState = {
   temp_max: 0,
   description: '',
   icon: '',
-  error: null
+  error: null,
 };
 
 const middleware = [thunk];

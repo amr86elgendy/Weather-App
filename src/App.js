@@ -78,10 +78,10 @@ function App() {
             />
 
             <h3>{description}</h3>
-            <h1>{temp > 0 ? calcCelsuis(temp) : temp}&deg;</h1>
+            <h1>{temp ? calcCelsuis(temp) : 0}&deg;</h1>
             <div>
-              <span>{temp_min ? calcCelsuis(temp_min) : temp_min}&deg;</span>
-              <span>{temp_max ? calcCelsuis(temp_max) : temp_max}&deg;</span>
+              <span>{temp_min ? calcCelsuis(temp_min) : 0}&deg;</span>
+              <span>{temp_max ? calcCelsuis(temp_max) : 0}&deg;</span>
             </div>
           </>
         )}
