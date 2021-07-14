@@ -96,6 +96,62 @@ body {
   margin-right: 6rem;
 }
 
+.container .down .loader {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-top: 8rem;
+}
+
+.container .down .loader span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotate(calc(36deg * var(--i)));
+          transform: rotate(calc(36deg * var(--i)));
+}
+
+.container .down .loader span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #777;
+  -webkit-animation: animateSpin 1s linear infinite;
+          animation: animateSpin 1s linear infinite;
+  -webkit-animation-delay: calc(0.1s * var(--i));
+          animation-delay: calc(0.1s * var(--i));
+}
+
+@-webkit-keyframes animateSpin {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes animateSpin {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
 .container .error {
   margin-top: 3rem;
   color: red;
